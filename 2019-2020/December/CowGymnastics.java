@@ -22,19 +22,21 @@ public class CowGymnastics {
         cows[i][j] = nextInt();
       }
     }
+
     int first = 0;
     int second = 0;
     int count = 0;
     int total = 0;
     for (int i = 1; i <= highVal; i++) {
-      for (int j = i + 1; j <= highVal; j++) {
+      for (int j = 1; j <= highVal; j++) {
+        count = 0;
         for (int k = 0; k < rounds; k++) {
           for (int x = 0; x < highVal; x++) {
             if (cows[k][x] == i) {
               first = x;
             }
             if (cows[k][x] == j) {
-              second = k;
+              second = x;
             }
           }
           if (first < second) {
